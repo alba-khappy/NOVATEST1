@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@import url('http://fonts.cdnfonts.com/css/futura-pt');
+
+$blackColor: #000000;
+$whiteColor: #ffffff;
+$redColor: #EC3F3F;
+$redColorHover: #FF1E1E;
+
+@mixin btnStyle {
+    background: rgba(236, 63, 63, 0.1);
+    border: 1px solid rgba(236, 63, 63, 0.8);
+    font-weight: 600;
+    font-size: 16px;
+    color: $whiteColor;
+    text-align: center;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $redColorHover;
+    }
+}
+
+a {
+  text-decoration: none;
+  color: $whiteColor;
+}
+
+li {
+  list-style-type: none;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Futura PT', sans-serif;
+  background-color: $blackColor;
+  color: $whiteColor;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.h1 {
+  font-weight: 600;
+  font-size: 54px;
+}
+
+.h2  {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.link-logo {
+  display: block;
+  width: 130px;
+  height: 44px;
+  background: transparent url("~@/assets/logo.png") no-repeat center;
+  background-size: contain;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+
+  .h1 {
+    font-size: 40px;
+  }
+
+  .h2 {
+    font-size: 32px;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .link-logo {
+    width: 106px;
+    height: 36px;
+  }
+
+  .h1 {
+    font-size: 32px;
+  }
+
+  .h2 {
+    font-size: 28px;
+  }
+
+}
